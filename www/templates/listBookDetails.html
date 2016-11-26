@@ -1,0 +1,31 @@
+
+<ion-view view-title="List of Books">
+    <ion-content class="padding">
+        <ion-list>
+            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="data in booksInCategory" type="item-text-wrap" href="#/tab/categories/booksInCategory/{{allData._id}}">
+
+                <div class="panel-heading">
+                    <h2>{{title}}</h2>
+                </div>
+                <div class="panel-body">
+                    <img src='{{data.image}}' width="300" height="300" alt="{{author}}">
+                    <em class="pull-right">
+                        <h3><p>Price: ${{price}}</p></h3>
+                        <p>Rating: {{rating}} out of 5</p>
+                    </em>
+
+                    <h4>Short Description</h4>
+                    <p>{{shortDescription}}</p>
+                    <h4>Long Description</h4>
+                    <p>{{longDescription}}</p>
+
+
+
+                </div>
+                <br/>
+
+            </ion-item>
+            <ionic-ratings ratingsobj='ratingsObject' index='4'></ionic-ratings>
+        </ion-list>
+    </ion-content>
+</ion-view>
